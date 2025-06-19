@@ -1,0 +1,750 @@
+/* Mercedes-Inspired Color Palette and German Engineering Typography */
+:root {
+    --primary-color: #007AC3; /* Mercedes Blue */
+    --secondary-color: #C4C4C4; /* Mercedes Silver */
+    --accent-color: #1E4B72; /* Dark Blue */
+    --light-silver: #F5F5F5;
+    --dark-silver: #8C8C8C;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #17a2b8;
+}
+
+/* Typography - German Engineering Inspired */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.display-4, .display-5 {
+    font-weight: 700;
+}
+
+/* Custom Colors */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Top Bar */
+.top-bar {
+    font-size: 0.9rem;
+    z-index: 1040;
+}
+
+.top-bar a:hover {
+    opacity: 0.8;
+}
+
+/* Navigation */
+.navbar {
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    z-index: 1030;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+}
+
+.navbar-brand strong {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+.navbar-brand small {
+    font-size: 0.6rem;
+    margin-top: -8px;
+    display: block;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Sticky Navigation Styles */
+.sticky-navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+}
+
+.top-bar.sticky-top {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar.sticky-top {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 0;
+}
+
+/* Viber Button Styles */
+.btn-viber {
+    background-color: #665CAC;
+    border-color: #665CAC;
+    color: white;
+}
+
+.btn-viber:hover {
+    background-color: #5A4F99;
+    border-color: #5A4F99;
+    color: white;
+}
+
+.btn-viber:focus,
+.btn-viber.focus {
+    background-color: #5A4F99;
+    border-color: #5A4F99;
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(102, 92, 172, 0.5);
+}
+
+.btn-viber:active,
+.btn-viber.active {
+    background-color: #4F4486;
+    border-color: #4F4486;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--light-silver) 0%, #ffffff 100%);
+    padding: 50px 0;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.min-vh-50 {
+    min-height: 40vh;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.hero-section .lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Statistics Section */
+.stats-section {
+    background: var(--light-silver);
+}
+
+.stat-item {
+    padding: 2rem 1rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Part Cards */
+.part-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.part-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.part-card .card-img-top {
+    height: 160px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.part-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.part-card .badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.part-card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.part-card .card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.price-tag {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 0.8rem;
+}
+
+.part-card .card-footer {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    padding: 0.8rem 1rem;
+}
+
+.part-card .card-body {
+    padding: 1rem;
+}
+
+/* Service Cards */
+.service-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 2rem;
+}
+
+.service-card h4 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+
+.cta-section h2 {
+    color: white;
+}
+
+.cta-section .lead {
+    color: rgba(255,255,255,0.9);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a !important;
+}
+
+footer h5 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+footer .contact-info p {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+footer .contact-info i {
+    width: 20px;
+    color: var(--primary-color);
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Additional styles for About and Contact pages */
+
+/* Contact Info Cards */
+.contact-info-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Expertise Cards */
+.expertise-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+}
+
+.expertise-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Feature Items */
+.feature-item {
+    margin-bottom: 2rem;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 122, 195, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Team Section */
+.team-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.team-card {
+    padding: 2rem;
+}
+
+/* Map Container */
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    border: 0;
+    border-radius: 10px;
+}
+
+/* FAQ Accordion */
+.accordion-button {
+    font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 122, 195, 0.1);
+    color: var(--primary-color);
+}
+
+/* Company Story Section */
+.company-story {
+    background: white;
+}
+
+.company-story img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Page Headers */
+.page-header {
+    background: linear-gradient(135deg, var(--light-silver) 0%, #ffffff 100%);
+}
+
+/* Quick Contact Buttons */
+.quick-contact .btn {
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+/* Newsletter */
+.newsletter-signup .input-group {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.newsletter-signup .form-control {
+    border-right: none;
+}
+
+.newsletter-signup .btn {
+    border-left: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section {
+        padding: 30px 0;
+        text-align: center;
+        min-height: 40vh;
+    }
+    
+    .hero-section .col-lg-6:first-child {
+        margin-bottom: 2rem;
+    }
+    
+    .hero-section .d-flex {
+        justify-content: center !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    .min-vh-50 {
+        min-height: 30vh;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .display-4, .display-5 {
+        font-size: 2rem;
+    }
+      .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .part-card .card-img-top {
+        height: 150px;
+    }
+    
+    .part-card .card-title {
+        font-size: 1rem;
+    }
+    
+    .part-card .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-section {
+        padding: 20px 0;
+        min-height: 35vh;
+    }
+    
+    .hero-section .col-lg-6:first-child {
+        margin-bottom: 2.5rem;
+    }
+    
+    .hero-section .d-flex {
+        justify-content: center !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem !important;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-section .btn-lg {
+        width: 80%;
+        max-width: 250px;
+    }
+      .part-card .card-img-top {
+        height: 140px;
+    }
+    
+    .part-card .card-title {
+        font-size: 0.95rem;
+    }
+    
+    .part-card .card-text {
+        font-size: 0.85rem;
+    }
+    
+    .price-tag {
+        font-size: 1.1rem;
+    }
+    
+    .part-card .card-body {
+        padding: 0.8rem;
+    }
+    
+    .part-card .card-footer {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Filter Section Styles */
+.filter-section {
+    background: var(--light-silver);
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.filter-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.filter-section .form-select {
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+    padding: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-section .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 122, 195, 0.25);
+}
+
+/* Parts Grid */
+.parts-grid {
+    padding: 3rem 0;
+}
+
+.parts-grid .row {
+    margin-bottom: 2rem;
+}
+
+/* Loading animation for stats */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-item {
+    animation: countUp 0.6s ease-out;
+}
+
+/* Card hover effects */
+.card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Button hover effects */
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile optimizations */
+@media (max-width: 991px) {
+    .parts-grid .col-lg-3 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .parts-grid .row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+    
+    .parts-grid .col-md-6 {
+        flex: 0 0 280px;
+        margin-right: 1rem;
+    }
+    
+    .parts-grid .col-md-6:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Contact form styling */
+.contact-form {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 122, 195, 0.25);
+}
+
+/* Order form modal styling */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* Additional responsive improvements */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .top-bar {
+        font-size: 0.8rem;
+    }
+    
+    .top-bar .col-md-6 {
+        text-align: center !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .cta-section .btn {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+}

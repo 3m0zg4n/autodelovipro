@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delovi - Mercedes A Klasa | AutoDeloviPro</title>
+    <meta name="description" content="Originalni Mercedes A klasa delovi - kočnice, motor, elektrika, vešanje. Preko 12000 delova na stanju sa garancijom. Pozovite +381 11 1234 567">
+    <meta name="keywords" content="mercedes a klasa delovi, A140, A160, A170, A180, A200, A250, kočnice, motor, elektrika, auto delovi">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>    <!-- Sticky Navigation Container -->
+    <div class="sticky-navigation">
+        <!-- Top Bar -->
+        <div class="top-bar bg-dark text-white py-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <small><i class="fas fa-clock"></i> Pon-Pet: 08:00-17:00 | Sub: 08:00-13:00</small>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="tel:+381111234567" class="text-white text-decoration-none me-3">
+                            <i class="fas fa-phone"></i> +381 11 1234 567
+                        </a>
+                        <a href="https://wa.me/381111234567" class="text-white text-decoration-none me-3">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="viber://chat?number=+381111234567" class="text-white text-decoration-none">
+                            <i class="fab fa-viber"></i> Viber
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <strong class="text-primary">AutoDeloviPro</strong>
+                <small class="text-muted d-block">Mercedes A Klasa</small>
+            </a>
+            
+            <div class="d-flex order-lg-2">
+                <a href="tel:+381111234567" class="btn btn-primary me-2">
+                    <i class="fas fa-phone"></i> Pozovi
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>            <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Početna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="parts.html">Delovi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">O Nama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold text-dark mb-3">Mercedes A Klasa Delovi</h1>
+                    <p class="lead text-muted">Originalni polovni delovi sa garancijom kvaliteta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-4"><i class="fas fa-filter"></i> Filtriraj Delove</h3>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label for="modelFilter" class="form-label fw-bold">Model Vozila:</label>
+                    <select class="form-select" id="modelFilter">
+                        <option value="all">Svi Modeli</option>
+                        <option value="A140">Mercedes A140</option>
+                        <option value="A160">Mercedes A160</option>
+                        <option value="A170">Mercedes A170</option>
+                        <option value="A180">Mercedes A180</option>
+                        <option value="A200">Mercedes A200</option>
+                        <option value="A250">Mercedes A250</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="categoryFilter" class="form-label fw-bold">Tip Dela:</label>
+                    <select class="form-select" id="categoryFilter">
+                        <option value="all">Sve Kategorije</option>
+                        <option value="kocnice">Kočnice</option>
+                        <option value="motor">Motor</option>
+                        <option value="elektrika">Elektrika</option>
+                        <option value="vesanje">Vešanje</option>
+                        <option value="karoserija">Karoserija</option>
+                    </select>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <div class="results-count text-muted">
+                        Prikazano 18 delova
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parts Grid -->
+    <section class="parts-grid">
+        <div class="container">
+            <div class="row g-4" id="partsGrid">
+                <!-- Brake Parts -->
+                <div class="col-lg-3 col-md-6 part-item" data-model="A140,A160,A170" data-category="kocnice">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Brake Pads">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Kočnice</span>
+                            <h5 class="card-title">Kočione Pločice Prednje</h5>
+                            <p class="card-text">Originalne kočione pločice za A140/A160/A170</p>
+                            <div class="price-tag">8.500 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A180,A200,A250" data-category="kocnice">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Brake Discs">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Kočnice</span>
+                            <h5 class="card-title">Kočioni Diskovi Zadnji</h5>
+                            <p class="card-text">Originalni kočioni diskovi za A180/A200/A250</p>
+                            <div class="price-tag">12.000 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A160,A180" data-category="kocnice">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Brake Caliper">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Kočnice</span>
+                            <h5 class="card-title">Kočiona Čeljust Prednja</h5>
+                            <p class="card-text">Originalna kočiona čeljust za A160/A180</p>
+                            <div class="price-tag">18.500 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engine Parts -->
+                <div class="col-lg-3 col-md-6 part-item" data-model="A200,A250" data-category="motor">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Engine Oil Filter">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Motor</span>
+                            <h5 class="card-title">Filter Ulja Motora</h5>
+                            <p class="card-text">Originalni filter ulja za A200/A250</p>
+                            <div class="price-tag">1.200 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A140,A160" data-category="motor">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Air Filter">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Motor</span>
+                            <h5 class="card-title">Filter Vazduha</h5>
+                            <p class="card-text">Originalni filter vazduha za A140/A160</p>
+                            <div class="price-tag">2.800 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A170,A180,A200" data-category="motor">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Spark Plugs">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Motor</span>
+                            <h5 class="card-title">Svećice Set 4kom</h5>
+                            <p class="card-text">Originalne svećice za A170/A180/A200</p>
+                            <div class="price-tag">4.500 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electrical Parts -->
+                <div class="col-lg-3 col-md-6 part-item" data-model="A160,A170" data-category="elektrika">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Headlight">
+                        <div class="card-body">
+                            <span class="badge bg-warning mb-2">Elektrika</span>
+                            <h5 class="card-title">Far Prednji Desni</h5>
+                            <p class="card-text">Kompletna svetlosna grupa za A160/A170</p>
+                            <div class="price-tag">15.000 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A180,A200,A250" data-category="elektrika">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Tail Light">
+                        <div class="card-body">
+                            <span class="badge bg-warning mb-2">Elektrika</span>
+                            <h5 class="card-title">Stop Svetlo Levo</h5>
+                            <p class="card-text">Originalno stop svetlo za A180/A200/A250</p>
+                            <div class="price-tag">8.000 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A140,A160,A170,A180" data-category="elektrika">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Alternator">
+                        <div class="card-body">
+                            <span class="badge bg-warning mb-2">Elektrika</span>
+                            <h5 class="card-title">Alternator</h5>
+                            <p class="card-text">Originalni alternator za sve A klasa modele</p>
+                            <div class="price-tag">22.000 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suspension Parts -->
+                <div class="col-lg-3 col-md-6 part-item" data-model="A180,A200" data-category="vesanje">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Shock Absorber">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Vešanje</span>
+                            <h5 class="card-title">Amortizer Prednji</h5>
+                            <p class="card-text">Originalni amortizer za A180/A200</p>
+                            <div class="price-tag">12.000 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A160,A170,A180" data-category="vesanje">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Springs">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Vešanje</span>
+                            <h5 class="card-title">Opruge Prednje</h5>
+                            <p class="card-text">Originalne opruge za A160/A170/A180</p>
+                            <div class="price-tag">9.500 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A200,A250" data-category="vesanje">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Control Arm">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Vešanje</span>
+                            <h5 class="card-title">Rameno Vešanja Donje</h5>
+                            <p class="card-text">Originalno rameno vešanja za A200/A250</p>
+                            <div class="price-tag">14.500 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Body Parts -->
+                <div class="col-lg-3 col-md-6 part-item" data-model="A140,A160,A170" data-category="karoserija">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Door Handle">
+                        <div class="card-body">
+                            <span class="badge bg-secondary mb-2">Karoserija</span>
+                            <h5 class="card-title">Kvaka Vrata Spoljašnja</h5>
+                            <p class="card-text">Originalna kvaka za A140/A160/A170</p>
+                            <div class="price-tag">3.500 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A180,A200,A250" data-category="karoserija">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Side Mirror">
+                        <div class="card-body">
+                            <span class="badge bg-secondary mb-2">Karoserija</span>
+                            <h5 class="card-title">Retrovizor Desni</h5>
+                            <p class="card-text">Originalni retrovizor za A180/A200/A250</p>
+                            <div class="price-tag">6.800 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A160,A170,A180" data-category="karoserija">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Bumper">
+                        <div class="card-body">
+                            <span class="badge bg-secondary mb-2">Karoserija</span>
+                            <h5 class="card-title">Branik Prednji</h5>
+                            <p class="card-text">Originalni branik za A160/A170/A180</p>
+                            <div class="price-tag">25.000 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 part-item" data-model="A200,A250" data-category="motor">
+                    <div class="card part-card h-100">
+                        <img src="https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="card-img-top" alt="Turbocharger">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Motor</span>
+                            <h5 class="card-title">Turbopunjač</h5>
+                            <p class="card-text">Originalni turbopunjač za A200/A250</p>
+                            <div class="price-tag">45.000 RSD</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-shopping-cart"></i> Poruči
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Godina Iskustva</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5000">0</div>
+                        <div class="stat-label">Zadovoljnih Klijenata</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12000">0</div>
+                        <div class="stat-label">Delova na Stanju</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3500">0</div>
+                        <div class="stat-label">Srećnih Automobila</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark">Naše Usluge na Delovima</h2>
+                    <p class="lead text-muted">Kompletna usluga za Mercedes A klasu</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Originalni Polovni Delovi</h4>
+                        <p class="text-muted">Veliki izbor originalnih Mercedes delova sa inventarskim brojevima</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h4>Brza Nabavka i Dostava</h4>
+                        <p class="text-muted">Ekspresna nabavka delova koje nemamo na stanju i brza dostava po Srbiji</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Stručna Ugradnja</h4>
+                        <p class="text-muted">Profesionalna ugradnja delova u našem servisu od strane sertifikovanih majstora</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Besplatna Konsultacija</h4>
+                        <p class="text-muted">Stručno savetovanje o izboru delova i održavanju vašeg Mercedes-a</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold text-white mb-4">Ne Možete da Nađete Deo Koji Vam Treba?</h2>
+                    <p class="lead text-white mb-4">
+                        Kontaktirajte nas direktno - imamo pristup širokoj mreži dobavljača Mercedes delova
+                    </p>                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="tel:+381111234567" class="btn btn-light btn-lg">
+                            <i class="fas fa-phone text-primary"></i> Pozovite Nas
+                        </a>
+                        <a href="https://wa.me/381111234567" class="btn btn-success btn-lg">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>                        <a href="viber://chat?number=+381111234567" class="btn btn-viber btn-lg">
+                            <i class="fab fa-viber"></i> Viber
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-envelope"></i> Pošaljite Upit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-primary">AutoDeloviPro</h5>
+                    <p class="text-light">
+                        Specijalizovani za Mercedes A klasu sa preko 15 godina iskustva. 
+                        Originalni polovni delovi sa garancijom.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/381111234567" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5>Kontakt Informacije</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Bulevar kralja Aleksandra 123, Beograd</p>
+                        <p><i class="fas fa-phone"></i> +381 11 1234 567</p>
+                        <p><i class="fas fa-envelope"></i> info@autodelovi.rs</p>
+                        <p><i class="fas fa-clock"></i> Pon-Pet: 08:00-17:00 | Sub: 08:00-13:00</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5>Brze Veze</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Početna</a></li>
+                        <li><a href="parts.html" class="text-light">Delovi</a></li>
+                        <li><a href="about.html" class="text-light">O Nama</a></li>
+                        <li><a href="contact.html" class="text-light">Kontakt</a></li>
+                    </ul>
+                    
+                    <h6 class="mt-4">Dodatne Usluge</h6>
+                    <ul class="list-unstyled">
+                        <li class="text-light">✓ Garancija na delove</li>
+                        <li class="text-light">✓ Otkup vozila za delove</li>
+                        <li class="text-light">✓ Besplatna provera VIN broja</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-secondary">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 AutoDeloviPro. Sva prava zadržana.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
